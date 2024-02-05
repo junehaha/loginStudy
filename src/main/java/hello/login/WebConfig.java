@@ -47,11 +47,11 @@ public class WebConfig implements WebMvcConfigurer {
 
   //  @Bean
     public FilterRegistrationBean loginCheckFilter(){
-        FilterRegistrationBean<Filter> ft = new FilterRegistrationBean<>();
-        ft.setFilter(new LoginCheckFilter());
-        ft.setOrder(2);
-        ft.addUrlPatterns("/*");
+        FilterRegistrationBean<Filter> ftb = new FilterRegistrationBean<>();
+        ftb.setFilter(new LoginCheckFilter());
+        ftb.setOrder(2);
+        ftb.addUrlPatterns("/*");
 
-        return ft;
+        return ftb;
     }
 }
