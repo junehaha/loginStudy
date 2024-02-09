@@ -6,6 +6,7 @@ import hello.login.web.SessionConst;
 import hello.login.web.session.SessionManager;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -99,14 +100,11 @@ public class LoginController {
         return "redirect:"+ redirectURL;
 
     }
-
-
     //@PostMapping("/logout")
     public String logout(HttpServletResponse response){
         expireCookie(response,"memberId");
         return "redirect:/";
     }
-
    // @PostMapping("/logout")
     public String logoutV2(HttpServletRequest request){
         sessionManager.expire(request);
