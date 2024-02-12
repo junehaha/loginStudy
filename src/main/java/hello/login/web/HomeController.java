@@ -53,7 +53,6 @@ public class HomeController {
         model.addAttribute("member",member);
         return "loginHome";
     }
-
     //@GetMapping("/")
     public String loginHomeV3(HttpServletRequest request,Model model){
         HttpSession session = request.getSession(false);
