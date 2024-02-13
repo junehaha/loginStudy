@@ -59,7 +59,6 @@ public class HomeController {
         if(session== null){
             return "home";
         }
-
         Member loginMember = (Member) session.getAttribute(SessionConst.LOGIN_MEMBER);
 
         if(loginMember == null){
