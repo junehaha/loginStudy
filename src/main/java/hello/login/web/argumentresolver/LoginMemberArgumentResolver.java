@@ -19,6 +19,7 @@ public class LoginMemberArgumentResolver implements HandlerMethodArgumentResolve
         return hasLoginAnnotation && hasMemberType;
     }
 
+
     @Override
     public Object resolveArgument(MethodParameter methodParameter, ModelAndViewContainer modelAndViewContainer, NativeWebRequest nativeWebRequest, WebDataBinderFactory webDataBinderFactory) throws Exception {
         HttpServletRequest request = (HttpServletRequest) nativeWebRequest.getNativeRequest();
