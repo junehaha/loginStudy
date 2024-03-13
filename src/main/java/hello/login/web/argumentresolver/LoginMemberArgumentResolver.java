@@ -1,4 +1,4 @@
-package hello.login.web.argumentresolver;
+package hello.login.web.argumentresolver;           
 
 import hello.login.domain.member.Member;
 import hello.login.web.SessionConst;
@@ -33,4 +33,5 @@ public class LoginMemberArgumentResolver implements HandlerMethodArgumentResolve
         return session.getAttribute(SessionConst.LOGIN_MEMBER);
 
     }
+
 }
